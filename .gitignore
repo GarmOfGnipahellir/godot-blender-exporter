@@ -6,3 +6,5 @@ tests/godot_project/exports/*
 
 .import 
 *.import
+
+.vscode/
