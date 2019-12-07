@@ -136,6 +136,8 @@ class MeshConverter:
         depsgraph.update()
         self.eval_object = self.object.evaluated_get(depsgraph)
 
+        print(self.eval_object)
+
         # These parameters are required for preserving vertex groups.
         mesh = self.eval_object.to_mesh(
             preserve_all_data_layers=preserve_vertex_groups,

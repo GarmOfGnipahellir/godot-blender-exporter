@@ -490,6 +490,7 @@ class Surface:
         self.vertex_index_map = dict()
         self.id = None
         self.material = None
+        self.primitive = 4
 
     @property
     def name_str(self):
@@ -503,7 +504,7 @@ class Surface:
         surface_object = Map()
         if self.material is not None:
             surface_object['material'] = self.material
-        surface_object['primitive'] = 4
+        surface_object['primitive'] = self.primitive
         surface_object['arrays'] = self.vertex_data
         surface_object['morph_arrays'] = self.morph_arrays
         return surface_object

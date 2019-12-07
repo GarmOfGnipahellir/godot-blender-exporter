@@ -312,7 +312,7 @@ def save(operator, context, filepath="", **kwargs):
     # object types
     if "GEOMETRY" in object_types:
         object_types.remove("GEOMETRY")
-        object_types |= {"MESH", "CURVE", "SURFACE", "META", "FONT"}
+        object_types |= {"MESH", "CURVE", "SURFACE", "META", "FONT", "GPENCIL"}
 
     with GodotExporter(filepath, kwargs, operator) as exp:
         exp.export()
